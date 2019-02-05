@@ -4045,9 +4045,9 @@ react-native-tab-view@^1.0.0, react-native-tab-view@^1.2.0:
   dependencies:
     prop-types "^15.6.1"
 
-"react-native-video@git+https://github.com/IbrahimSulai/react-native-video.git":
+"react-native-video@git+https://github.com/IbrahimSulai/react-native-video.git#master":
   version "4.3.1"
-  resolved "git+https://github.com/IbrahimSulai/react-native-video.git#e05c1c3c64c547439dc23f4c233e8ac537e2d8ac"
+  resolved "git+https://github.com/IbrahimSulai/react-native-video.git#1430dc7fea624dd42b8779c278fec152f42b70d3"
   dependencies:
     keymirror "^0.1.1"
     prop-types "^15.5.10"

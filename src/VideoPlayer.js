@@ -13,7 +13,7 @@ import Video, { FilterType, TextTrackType } from 'react-native-video';
 // const v = require('../assets/treadmill.mp4');
 // const vert = require('../assets/vertical.mp4');
 // const bbbLocal = require('../assets/big_buck_bunny_720p_1mb.mp4');
-const sintelLocal = require('../assets/sintel-2048-surround.mp4');
+// const sintelLocal = require('../assets/sintel-2048-surround.mp4');
 
 const bbbFile = 'file:///sdcard/Movies/bb.mp4';
 
@@ -154,6 +154,7 @@ export default class App extends Component {
     rate: 1.0,
     repeat: false,
     seekableDuration: 0,
+    seekPosition: null,
     selectedAudioTrack: {
       type: 'system'
     },
@@ -163,9 +164,8 @@ export default class App extends Component {
     selectedVideoTrack: {
       type: 'auto'
     },
-    source: { uri: forbiddenPlanet },
-    source: sintelLocal,
-    startFullscreen: true,
+    source: { uri: bunnyUri },
+    startFullscreen: false,
     // textTrackGroup: 'one',
     useTextureView: true,
     videoNumber: 0,
@@ -783,10 +783,9 @@ export default class App extends Component {
         }}
         */
         source={this.state.source}
-        controls={this.state.controls}
         style={styles.video}
-        /*
         bufferConfig={this.state.bufferConfig}
+        controls={this.state.controls}
         //filter={this.state.filter}
         //filterEnabled={false}
         fullScreenOrientation="portrait"
@@ -826,7 +825,6 @@ export default class App extends Component {
         textTracks={textTracks}
         useTextureView={this.state.useTextureView}
         volume={this.state.volume}
-        */
       />
     );
   }
